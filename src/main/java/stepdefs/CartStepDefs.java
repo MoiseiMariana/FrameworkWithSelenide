@@ -9,8 +9,8 @@ public class CartStepDefs {
     CartPage cartPage = new CartPage();
 
     @Then("phone should be in the cart")
-    public void isBagPresent(){
-        cartPage.isBagPresent();
+    public void checkCart(){
+        cartPage.checkTheCart();
     }
 
     @When("click on Place order button")

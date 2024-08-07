@@ -1,0 +1,9 @@
+stepdefs\CartStepDefs.class
+utils\runners\TestRunner.class
+pages\CartPage.class
+pages\HomePage.class
+pages\InventoryPages.class
+utils\hooks\Hooks.class
+stepdefs\HomePageStepsDefs.class
+stepdefs\InventoryStepDefs.class
+stepdefs\BaseStepDefs.class

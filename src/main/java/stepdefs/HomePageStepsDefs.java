@@ -15,7 +15,6 @@ public class HomePageStepsDefs {
     }
     @When("user click on desired product")
     public void userclickonSamsung(){
-
         homePage.userclickonSamsung();
     }
 

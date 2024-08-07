@@ -10,8 +10,8 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class HomePage {
 
-    private final SelenideElement product = $("body > div:nth-child(6) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h4:nth-child(1) > a:nth-child(1)");
-    private final SelenideElement samsungGalaxy = $(By.xpath("//*[@id=\"tbodyid\"]/div[1]/div/div/h4/a"));
+
+    private final SelenideElement product = $(By.xpath("//a[@class='hrefch' and text()='Samsung galaxy s6']"));
     private final SelenideElement signUpButton = $(By.cssSelector("#signin2"));
     private final SelenideElement signUpModal = $(By.cssSelector("#signInModal > div > div > div.modal-header"));
     private final SelenideElement usernameFld = $(By.cssSelector("#sign-username"));
@@ -25,12 +25,12 @@ public class HomePage {
     private final SelenideElement getLoginButtonAfterCredentials = $(By.cssSelector("#logInModal > div > div > div.modal-footer > button.btn.btn-primary"));
     private final SelenideElement logOutButton = $(By.xpath("//*[@id=\"logout2\"]"));
     private final SelenideElement phonesCategoryButton = $(By.cssSelector("#itemc"));
-    private final SelenideElement contactButton = $(By.cssSelector("#navbarExample > ul > li:nth-child(2) > a"));
+    private final SelenideElement contactButton = $(By.xpath("//a[text()='Contact']"));
     private final SelenideElement contactFormModalWindow = $(By.cssSelector("#exampleModalLabel"));
     private final SelenideElement contactFormEmailField = $(By.cssSelector("#recipient-email"));
     private final SelenideElement contactFormNameField = $(By.cssSelector("#recipient-name"));
-    private final SelenideElement contactFormMessageField = $(By.xpath("//*[@id=\"message-text\"]"));
-    private final SelenideElement contactFormSendMessageButton = $(By.cssSelector("#exampleModal > div > div > div.modal-footer > button.btn.btn-primary"));
+    private final SelenideElement contactFormMessageField = $(By.xpath("//*[@id='message-text']"));
+    private final SelenideElement contactFormSendMessageButton = $(By.xpath("//button[contains(text(),'Send message')]"));
     private final SelenideElement deleteSamsungGalaxyS6FromCart = $(By.cssSelector("#tbodyid > tr > td:nth-child(4) > a"));
     public void scrollToTheProduct() {
         product.scrollIntoView(true);
@@ -38,7 +38,7 @@ public class HomePage {
     }
 
     public void userclickonSamsung() {
-        samsungGalaxy.should(Condition.clickable).click();
+        product.should(Condition.clickable).click();
 
     }
 
@@ -119,7 +119,7 @@ public class HomePage {
 
     }
     public void theProductIsDisplayedInTheRightCategory() {
-        samsungGalaxy.should(Condition.appear);
+        product.should(Condition.appear);
     }
     public void clickOnContactButton() {
         contactButton.should(Condition.clickable).click();

@@ -9,8 +9,8 @@ public class InventoryStepDefs {
 
 
     @When("user add phone to the cart")
-    public void addBag(){
-        inventoryPages.addBag();
+    public void addToCart(){
+        inventoryPages.addPhoneToCart();
     }
 
     @And("navigate to cart")

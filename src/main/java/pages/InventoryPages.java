@@ -8,15 +8,15 @@ import static com.codeborne.selenide.Selenide.$;
 public class InventoryPages {
 
 
-    private final SelenideElement addBagToCart = $(By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/a"));
-    private final SelenideElement cartItem = $(By.xpath("//*[@id=\"cartur\"]"));
+    private final SelenideElement addToCartButton = $(By.xpath("//a[text()='Add to cart']"));
+    private final SelenideElement cartButton = $(By.xpath("//*[@id='cartur']"));
 
-    public void addBag() {
-        addBagToCart.should(Condition.clickable).click();
+    public void addPhoneToCart() {
+        addToCartButton.should(Condition.clickable).click();
 
     }
     public void navigateToCart() {
-        cartItem.should(Condition.appear).click();
+        cartButton.should(Condition.appear).click();
 
     }
 
